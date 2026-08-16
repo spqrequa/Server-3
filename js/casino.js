@@ -13,6 +13,16 @@ const TOKENS = {
     system: "sdfgyuiosdfgtyuiertymqwe"
 };
 
+// ============================================
+// [INFO] Endpoints de la API
+// ============================================
+// Auth:    api/auth/token_XXX/index.json
+// Users:   api/users/token_XXX/index.json
+// Balance: api/balance/token_XXX/index.json
+// Ruleta:  api/games/roulette/token_XXX_bet_YYY_amount_ZZZ/index.json
+// Retiro:  api/withdraw/token_XXX_wallet_YYY_flag_ZZZ/index.json
+// ============================================
+
 let currentToken = null;
 let currentUser = null;
 let currentRole = null;
@@ -51,7 +61,6 @@ async function loadBalance() {
     console.log('[CASINO] Cargando balance...');
     
     try {
-        // Ruta actualizada: api/balance/token_XXX/index.json
         const response = await fetch('api/balance/token_' + currentToken + '/index.json');
         const data = await response.json();
         
@@ -84,7 +93,6 @@ async function placeBet(betType) {
     
     console.log(`[CASINO] Apostando ${amount} a ${betType}`);
     
-    // Ruta actualizada: api/games/roulette/token_XXX_bet_XXX_amount_XXX/index.json
     const betEndpoint = `api/games/roulette/token_${currentToken}_bet_${betType}_amount_${amount}/index.json`;
     
     console.log('[CASINO] Endpoint:', betEndpoint);
@@ -124,7 +132,6 @@ async function spinRoulette() {
     if (currentToken === TOKENS.admin) {
         console.log('[CASINO] Token admin detectado. Usando backdoor...');
         
-        // Ruta actualizada: token_XXX_bet_admin_amount_1
         const backdoorEndpoint = `api/games/roulette/token_${currentToken}_bet_admin_amount_1/index.json`;
         
         try {
