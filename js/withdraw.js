@@ -41,8 +41,8 @@ async function withdraw() {
     console.log('[WITHDRAW] Wallet destino:', destWallet);
     console.log('[WITHDRAW] Flag introducida:', flag);
     
-    // Construir endpoint
-    const endpoint = `api/withdraw/?token=${token}&wallet=${destWallet}&flag=${flag}/index.json`;
+    // Construir endpoint con la estructura correcta
+    const endpoint = `api/withdraw/token_${token}_wallet_${destWallet}_flag_${flag}/index.json`;
     console.log('[WITHDRAW] Endpoint:', endpoint);
     
     // Mostrar pantalla de carga
