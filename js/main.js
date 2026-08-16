@@ -6,7 +6,7 @@
 // Los tokens son fragmentos de esta secuencia.
 // No compartir estos tokens con nadie.
 
-// Tokens de los roles (se descubren poco a poco)
+// Tokens de los roles
 const VALID_TOKENS = {
     guest: "ghjkuiopertysdfgtyui",
     user: "uiopsdfgertyrtyu",
@@ -14,6 +14,13 @@ const VALID_TOKENS = {
     collaborator: "cvbnopaslñzxlñzxasdfbnmqopasrtyuasdftyuiopasrtyu",
     system: "sdfgyuiosdfgtyuiertymqwe"
 };
+
+// ============================================
+// [PISTA] Los tokens siguen el patrón QWERTY
+// ============================================
+// Secuencia: qwertyuiopasdfghjklñzxcvbnm
+// Cada token es un fragmento de esta secuencia.
+// ============================================
 
 // Función para ir a la página de retiro
 function goToWithdraw() {
@@ -54,7 +61,7 @@ function login() {
 function guestLogin() {
     console.log('[AUTH] Accediendo como invitado...');
     
-    // Fetch al endpoint con la estructura correcta
+    // Fetch al endpoint de autenticación
     fetch('api/auth/token_' + VALID_TOKENS.guest + '/index.json')
         .then(res => res.json())
         .then(data => {
