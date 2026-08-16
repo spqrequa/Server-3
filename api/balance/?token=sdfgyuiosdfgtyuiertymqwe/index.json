@@ -1,1 +1,10 @@
-
+{
+    "token": "sdfgyuiosdfgtyuiertymqwe",
+    "role": "system",
+    "username": "system",
+    "balance": "999999999$",
+    "currency": "USD",
+    "last_update": "2026-08-16",
+    "note": "Balance infinito",
+    "flag": "flag{1d0r_1n_b4l4nc3_syst3m_4cc0unt}"
+}
