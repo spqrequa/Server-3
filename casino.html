@@ -5,69 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CryptoPalace Casino - Sala de Juegos</title>
     <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        .roulette-wrapper {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 30px;
+        }
+        
+        .roulette-arrow {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+            color: #f0b90b;
+            z-index: 10;
+        }
+        
+        .roulette-wheel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: relative;
+            background: #0d1117;
+            border: 5px solid #f0b90b;
+            transition: transform 3s cubic-bezier(0.2, 0.8, 0.3, 1);
+        }
+        
+        .roulette-wheel.spinning {
+            transform: rotate(1440deg);
+        }
+        
+        .roulette-number {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 0.9em;
+            color: white;
+            left: 50%;
+            top: 50%;
+            margin-left: -20px;
+            margin-top: -20px;
+        }
+        
+        .roulette-number.red { background: #dc2626; }
+        .roulette-number.black { background: #1f2937; }
+        .roulette-number.green { background: #059669; }
+        
+        .roulette-center {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #f0b90b;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            z-index: 5;
+        }
+    </style>
 </head>
 <body>
     <div class="casino-container">
-        <!-- Header con información del usuario -->
         <header class="casino-header">
             <div class="user-info">
                 <span id="userRole" class="badge">🎲 Guest</span>
                 <span id="username">invitado</span>
             </div>
-            
             <div class="balance-box">
                 <span class="balance-label">💰 Tu Wallet</span>
                 <span id="playerWallet" class="balance-amount" style="font-size:0.8em;">bc1q_...</span>
             </div>
-            
             <div class="balance-box">
                 <span class="balance-label">Balance</span>
                 <span id="balance" class="balance-amount">100$</span>
             </div>
-            
             <div class="header-buttons">
                 <button class="btn-withdraw-header" onclick="goToWithdraw()">💸 Retirar</button>
                 <button class="btn-logout" onclick="logout()">Salir</button>
             </div>
         </header>
 
-        <!-- Ruleta -->
         <main class="casino-main">
-            <div class="roulette-container">
+            <div class="roulette-wrapper">
+                <div class="roulette-arrow">▼</div>
                 <div class="roulette-wheel" id="rouletteWheel">
-                    <div class="roulette-number red">1</div>
-                    <div class="roulette-number black">2</div>
-                    <div class="roulette-number red">3</div>
-                    <div class="roulette-number black">4</div>
-                    <div class="roulette-number red">5</div>
-                    <div class="roulette-number black">6</div>
-                    <div class="roulette-number red">7</div>
-                    <div class="roulette-number black">8</div>
-                    <div class="roulette-number red">9</div>
-                    <div class="roulette-number black">10</div>
-                    <div class="roulette-number green">0</div>
+                    <div class="roulette-number red" style="transform: rotate(0deg) translateY(-110px);">1</div>
+                    <div class="roulette-number black" style="transform: rotate(36deg) translateY(-110px);">2</div>
+                    <div class="roulette-number red" style="transform: rotate(72deg) translateY(-110px);">3</div>
+                    <div class="roulette-number black" style="transform: rotate(108deg) translateY(-110px);">4</div>
+                    <div class="roulette-number red" style="transform: rotate(144deg) translateY(-110px);">5</div>
+                    <div class="roulette-number black" style="transform: rotate(180deg) translateY(-110px);">6</div>
+                    <div class="roulette-number red" style="transform: rotate(216deg) translateY(-110px);">7</div>
+                    <div class="roulette-number black" style="transform: rotate(252deg) translateY(-110px);">8</div>
+                    <div class="roulette-number red" style="transform: rotate(288deg) translateY(-110px);">9</div>
+                    <div class="roulette-number black" style="transform: rotate(324deg) translateY(-110px);">10</div>
+                    <div class="roulette-center">🎰</div>
                 </div>
             </div>
 
-            <!-- Controles de apuesta -->
             <div class="betting-panel">
                 <h2>Realizar Apuesta</h2>
-                
                 <div class="bet-options">
                     <button class="bet-btn red" onclick="placeBet('red')">🔴 Rojo</button>
                     <button class="bet-btn black" onclick="placeBet('black')">⚫ Negro</button>
                     <button class="bet-btn green" onclick="placeBet('green')">🟢 Verde (0)</button>
                 </div>
-                
                 <div class="bet-amount">
                     <label for="betAmount">Cantidad:</label>
                     <input type="number" id="betAmount" value="10" min="1" max="1000">
                 </div>
-                
                 <button class="btn-spin" onclick="spinRoulette()">🎰 Girar Ruleta</button>
             </div>
 
-            <!-- Resultado -->
             <div class="result-panel" id="resultPanel" style="display:none;">
                 <h3>Resultado</h3>
                 <p id="resultMessage"></p>
@@ -75,12 +137,67 @@
             </div>
         </main>
 
-        <!-- Footer con pistas -->
         <footer class="casino-footer">
             <p>🔍 Pista: Revisa la pestaña Network (F12) para ver las peticiones</p>
         </footer>
     </div>
 
-    <script src="js/casino.js"></script>
+    <script>
+        // ============================================
+        // RULETA ANIMADA - LÓGICA INTEGRADA
+        // ============================================
+        
+        let isSpinning = false;
+        
+        async function spinRoulette() {
+            const wheel = document.getElementById('rouletteWheel');
+            
+            // Evitar doble giro
+            if (isSpinning) {
+                return;
+            }
+            
+            isSpinning = true;
+            console.log('[RULETA] Girando...');
+            
+            // Añadir clase para girar
+            wheel.classList.add('spinning');
+            
+            // Esperar 3 segundos
+            await new Promise(resolve => setTimeout(resolve, 3000));
+            
+            // Quitar clase
+            wheel.classList.remove('spinning');
+            isSpinning = false;
+            
+            console.log('[RULETA] Giro completado');
+            
+            // Mostrar resultado aleatorio
+            const result = Math.floor(Math.random() * 37);
+            const resultPanel = document.getElementById('resultPanel');
+            const resultMessage = document.getElementById('resultMessage');
+            const resultAmount = document.getElementById('resultAmount');
+            
+            resultPanel.style.display = 'block';
+            resultMessage.textContent = `La bola cayó en ${result}`;
+            resultMessage.style.color = '#e6edf3';
+            resultAmount.textContent = 'Payout: 0$';
+        }
+        
+        // Funciones de apuesta (simplificadas para que no de error)
+        function placeBet(betType) {
+            console.log('[CASINO] Apuesta:', betType);
+            spinRoulette();
+        }
+        
+        function goToWithdraw() {
+            window.location.href = 'withdraw.html';
+        }
+        
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 </html>
