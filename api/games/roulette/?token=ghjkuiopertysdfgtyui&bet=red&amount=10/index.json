@@ -1,1 +1,10 @@
-
+{
+    "status": "LOSE",
+    "token": "ghjkuiopertysdfgtyui",
+    "bet": "red",
+    "amount": 10,
+    "result": 13,
+    "payout": 0,
+    "new_balance": "90$",
+    "message": "La bola cayó en 13 (negro)"
+}
