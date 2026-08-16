@@ -1,1 +1,81 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPalace Casino - Retiro BTC</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="withdraw-container">
+        <div class="logo">💸</div>
+        <h1>Retiro BTC</h1>
+        <p class="subtitle">Transfiere tus ganancias a tu wallet personal</p>
+        
+        <!-- Formulario de retiro -->
+        <div class="withdraw-form" id="withdrawForm">
+            <div class="form-group">
+                <label for="playerWallet">💰 Tu Wallet BTC</label>
+                <input type="text" id="playerWallet" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="destWallet">🎯 Wallet de destino</label>
+                <input type="text" id="destWallet" placeholder="Introduce la wallet de destino (bc1q...)">
+            </div>
+            
+            <div class="form-group">
+                <label for="flagInput">🔑 Flag de confirmación</label>
+                <input type="text" id="flagInput" placeholder="Introduce la flag de confirmación">
+            </div>
+            
+            <button class="btn-withdraw" onclick="withdraw()">💸 Retirar Fondos</button>
+        </div>
+        
+        <!-- Pantalla de carga (oculta inicialmente) -->
+        <div id="loading" style="display:none;">
+            <div class="loading-box">
+                <div class="spinner"></div>
+                <p class="loading-text">Procesando transacción...</p>
+                <p class="loading-subtext">Verificando flag de confirmación...</p>
+            </div>
+        </div>
+        
+        <!-- Transacción completada (oculta inicialmente) -->
+        <div id="complete" style="display:none;">
+            <div class="complete-box">
+                <div class="complete-icon">✅</div>
+                <h2>Transacción Completada</h2>
+                
+                <div class="tx-info">
+                    <span class="tx-label">ID de transacción</span>
+                    <span class="tx-value" id="txId"></span>
+                </div>
+                
+                <div class="tx-info">
+                    <span class="tx-label">Cantidad transferida</span>
+                    <span class="tx-value" id="txAmount"></span>
+                </div>
+                
+                <div class="tx-info">
+                    <span class="tx-label">Wallet de destino</span>
+                    <span class="tx-value" id="txWallet"></span>
+                </div>
+                
+                <div class="final-flag" id="finalFlag"></div>
+                
+                <a href="casino.html" class="back-btn">🎰 Volver al Casino</a>
+            </div>
+        </div>
+        
+        <!-- Error (oculto inicialmente) -->
+        <div id="errorBox" style="display:none;">
+            <div class="error-box">
+                <p id="errorMessage"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/withdraw.js"></script>
+</body>
+</html>
