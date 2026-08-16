@@ -37,4 +37,4 @@ const ROT13Handler = {
 // "ynt" = "flag"
 
 // Flag escondida
-// flag{r0t13_1s_n0t_3ncrypt10n}
+// flag{doifhw9e8hfw9è8fhwi`9fe8hwg8`9ehg89fg98fgi}
