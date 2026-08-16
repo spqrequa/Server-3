@@ -15,6 +15,12 @@ const VALID_TOKENS = {
     system: "sdfgyuiosdfgtyuiertymqwe"
 };
 
+// Función para ir a la página de retiro
+function goToWithdraw() {
+    console.log('[AUTH] Navegando a retiro BTC...');
+    window.location.href = 'withdraw.html';
+}
+
 // Función para login estándar
 function login() {
     const username = document.getElementById('username').value;
@@ -22,13 +28,20 @@ function login() {
     const errorMsg = document.getElementById('errorMsg');
     
     if (username && password) {
-        // Simulación de login exitoso
         errorMsg.style.display = 'none';
         
         // Guardar sesión como guest (por defecto)
         localStorage.setItem('casino_user', username);
         localStorage.setItem('casino_token', VALID_TOKENS.guest);
         localStorage.setItem('casino_role', 'guest');
+        localStorage.setItem('player_wallet', 'bc1q_' + username + '_cryptopalace');
+        
+        console.log('[AUTH] Sesión iniciada:', {
+            user: username,
+            token: VALID_TOKENS.guest,
+            role: 'guest',
+            wallet: localStorage.getItem('player_wallet')
+        });
         
         // Redirigir al casino
         window.location.href = 'casino.html';
@@ -49,8 +62,10 @@ function guestLogin() {
                 localStorage.setItem('casino_user', data.username);
                 localStorage.setItem('casino_token', data.token);
                 localStorage.setItem('casino_role', data.role);
+                localStorage.setItem('player_wallet', 'bc1q_guest_cryptopalace_wallet');
                 
                 console.log('[AUTH] Sesión de invitado:', data);
+                console.log('[AUTH] Wallet:', localStorage.getItem('player_wallet'));
                 
                 window.location.href = 'casino.html';
             }
@@ -61,21 +76,7 @@ function guestLogin() {
             localStorage.setItem('casino_user', 'guest');
             localStorage.setItem('casino_token', VALID_TOKENS.guest);
             localStorage.setItem('casino_role', 'guest');
+            localStorage.setItem('player_wallet', 'bc1q_guest_cryptopalace_wallet');
             window.location.href = 'casino.html';
         });
-}
-
-// Función para validar token contra la API
-async function validateToken(token) {
-    console.log('[AUTH] Validando token:', token);
-    
-    try {
-        const response = await fetch('api/auth/?token=' + token + '/index.json');
-        const data = await response.json();
-        console.log('[AUTH] Respuesta:', data);
-        return data;
-    } catch (error) {
-        console.error('[AUTH] Error validando token:', error);
-        return null;
-    }
 }
