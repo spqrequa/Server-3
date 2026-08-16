@@ -1,1 +1,19 @@
+# ============================================
+# CRYPTOPALACE CASINO - ROBOTS.TXT
+# ============================================
+# Los archivos del core están protegidos
+# La API está en /api/
+# Los tokens siguen la secuencia qwerty
 
+User-agent: *
+Disallow: /core/
+Disallow: /api/auth/
+Disallow: /api/users/
+Disallow: /api/balance/
+
+# Flag 2 escondida
+# flag{r0b0ts_txt_r3v34ls_h1dd3n_p4ths}
+
+# Pista: La secuencia base es "qwertyuiopasdfghjklñzxcvbnm"
+# Guest empieza con "ghjk..."
+# Admin empieza con "asdf..."
