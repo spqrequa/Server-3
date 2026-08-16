@@ -1,0 +1,5 @@
+{
+    "status": "ERROR",
+    "message": "Flag de confirmación incorrecta. El retiro no se ha completado.",
+    "attempts_remaining": 2
+}
