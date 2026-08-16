@@ -1,1 +1,9 @@
-
+{
+    "token": "uiopsdfgertyrtyu",
+    "role": "user",
+    "username": "jugador",
+    "email": "jugador@cryptopalace.com",
+    "level": 5,
+    "experience": 1500,
+    "note": "Cliente habitual"
+}
