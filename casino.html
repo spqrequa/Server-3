@@ -14,11 +14,21 @@
                 <span id="userRole" class="badge">🎲 Guest</span>
                 <span id="username">invitado</span>
             </div>
+            
+            <div class="balance-box">
+                <span class="balance-label">💰 Tu Wallet</span>
+                <span id="playerWallet" class="balance-amount" style="font-size:0.8em;">bc1q_...</span>
+            </div>
+            
             <div class="balance-box">
                 <span class="balance-label">Balance</span>
                 <span id="balance" class="balance-amount">100$</span>
             </div>
-            <button class="btn-logout" onclick="logout()">Salir</button>
+            
+            <div class="header-buttons">
+                <button class="btn-withdraw-header" onclick="goToWithdraw()">💸 Retirar</button>
+                <button class="btn-logout" onclick="logout()">Salir</button>
+            </div>
         </header>
 
         <!-- Ruleta -->
@@ -68,8 +78,6 @@
         <!-- Footer con pistas -->
         <footer class="casino-footer">
             <p>🔍 Pista: Revisa la pestaña Network (F12) para ver las peticiones</p>
-            <!-- Flag 2 escondida -->
-            <!-- flag{c4s1n0_s4l4_4cc3ss_gr4nt3d} -->
         </footer>
     </div>
 
