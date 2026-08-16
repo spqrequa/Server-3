@@ -1,1 +1,9 @@
-
+{
+    "status": "success",
+    "token": "uiopsdfgertyrtyu",
+    "role": "user",
+    "username": "jugador",
+    "message": "Acceso de usuario concedido",
+    "balance": "5000$",
+    "flag": "flag{us3r_t0k3n_d1sc0v3r3d}"
+}
