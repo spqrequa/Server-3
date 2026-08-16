@@ -46,7 +46,4 @@ class BalanceManager {
             flag: 'flag{1d0r_1n_b4l4nc3_m4n4g3r}'
         };
     }
-    
-    // Flag escondida
-    // flag{b4l4nc3_m4n4g3r_1d0r_3xp0s3d}
 }
