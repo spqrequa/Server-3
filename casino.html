@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPalace Casino - Sala de Juegos</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="casino-container">
+        <!-- Header con información del usuario -->
+        <header class="casino-header">
+            <div class="user-info">
+                <span id="userRole" class="badge">🎲 Guest</span>
+                <span id="username">invitado</span>
+            </div>
+            <div class="balance-box">
+                <span class="balance-label">Balance</span>
+                <span id="balance" class="balance-amount">100$</span>
+            </div>
+            <button class="btn-logout" onclick="logout()">Salir</button>
+        </header>
 
+        <!-- Ruleta -->
+        <main class="casino-main">
+            <div class="roulette-container">
+                <div class="roulette-wheel" id="rouletteWheel">
+                    <div class="roulette-number red">1</div>
+                    <div class="roulette-number black">2</div>
+                    <div class="roulette-number red">3</div>
+                    <div class="roulette-number black">4</div>
+                    <div class="roulette-number red">5</div>
+                    <div class="roulette-number black">6</div>
+                    <div class="roulette-number red">7</div>
+                    <div class="roulette-number black">8</div>
+                    <div class="roulette-number red">9</div>
+                    <div class="roulette-number black">10</div>
+                    <div class="roulette-number green">0</div>
+                </div>
+            </div>
+
+            <!-- Controles de apuesta -->
+            <div class="betting-panel">
+                <h2>Realizar Apuesta</h2>
+                
+                <div class="bet-options">
+                    <button class="bet-btn red" onclick="placeBet('red')">🔴 Rojo</button>
+                    <button class="bet-btn black" onclick="placeBet('black')">⚫ Negro</button>
+                    <button class="bet-btn green" onclick="placeBet('green')">🟢 Verde (0)</button>
+                </div>
+                
+                <div class="bet-amount">
+                    <label for="betAmount">Cantidad:</label>
+                    <input type="number" id="betAmount" value="10" min="1" max="1000">
+                </div>
+                
+                <button class="btn-spin" onclick="spinRoulette()">🎰 Girar Ruleta</button>
+            </div>
+
+            <!-- Resultado -->
+            <div class="result-panel" id="resultPanel" style="display:none;">
+                <h3>Resultado</h3>
+                <p id="resultMessage"></p>
+                <p id="resultAmount"></p>
+            </div>
+        </main>
+
+        <!-- Footer con pistas -->
+        <footer class="casino-footer">
+            <p>🔍 Pista: Revisa la pestaña Network (F12) para ver las peticiones</p>
+            <!-- Flag 2 escondida -->
+            <!-- flag{c4s1n0_s4l4_4cc3ss_gr4nt3d} -->
+        </footer>
+    </div>
+
+    <script src="js/casino.js"></script>
+</body>
+</html>
