@@ -1,1 +1,9 @@
-
+{
+    "status": "success",
+    "token": "asdfdfghmqweiopanmqwe",
+    "role": "admin",
+    "username": "admin",
+    "message": "Acceso de administrador concedido",
+    "balance": "999999$",
+    "flag": "flag{qw3rty_s3qu3nc3_t0k3n_d1sc0v3r3d}"
+}
