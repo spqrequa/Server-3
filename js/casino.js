@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Actualizar interfaz
     document.getElementById('username').textContent = currentUser || 'invitado';
     
+    // Mostrar wallet del jugador
+    const playerWallet = localStorage.getItem('player_wallet') || 'bc1q_default_cryptopalace_wallet';
+    document.getElementById('playerWallet').textContent = playerWallet;
+    
     // Cargar balance
     loadBalance();
 });
@@ -169,10 +173,17 @@ function showResult(data) {
     }
 }
 
+// Ir a la página de retiro
+function goToWithdraw() {
+    console.log('[CASINO] Navegando a retiro BTC...');
+    window.location.href = 'withdraw.html';
+}
+
 // Cerrar sesión
 function logout() {
     localStorage.removeItem('casino_user');
     localStorage.removeItem('casino_token');
     localStorage.removeItem('casino_role');
+    localStorage.removeItem('player_wallet');
     window.location.href = 'index.html';
 }
