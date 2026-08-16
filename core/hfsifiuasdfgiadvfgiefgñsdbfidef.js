@@ -23,9 +23,6 @@ const VALID_TOKENS = {
     system: "sdfgyuiosdfgtyuiertymqwe"
 };
 
-// Flag 3 escondida en este archivo
-// flag{c0r3_4uth_syst3m_3xp0s3d}
-
 function validateToken(token) {
     console.log('[CORE-AUTH] Validando token:', token);
     
