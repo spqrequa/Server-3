@@ -54,8 +54,8 @@ function login() {
 function guestLogin() {
     console.log('[AUTH] Accediendo como invitado...');
     
-    // Simular petición a la API
-    fetch('api/auth/?token=' + VALID_TOKENS.guest + '/index.json')
+    // Fetch al endpoint con la estructura correcta
+    fetch('api/auth/token_' + VALID_TOKENS.guest + '/index.json')
         .then(res => res.json())
         .then(data => {
             if (data.status === 'success') {
