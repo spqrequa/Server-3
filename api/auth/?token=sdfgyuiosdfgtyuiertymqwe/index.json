@@ -1,1 +1,9 @@
-
+{
+    "status": "success",
+    "token": "sdfgyuiosdfgtyuiertymqwe",
+    "role": "system",
+    "username": "system",
+    "message": "Acceso de sistema concedido",
+    "balance": "∞",
+    "flag": "flag{syst3m_0v3rr1d3_4ct1v4t3d}"
+}
