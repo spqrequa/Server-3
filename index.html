@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPalace Casino</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎰</div>
+        <h1>CryptoPalace</h1>
+        <p class="subtitle">The most exclusive crypto casino in the world</p>
+        
+        <div class="features">
+            <div class="feature">
+                <span>💰</span>
+                <p>Instant Payouts</p>
+            </div>
+            <div class="feature">
+                <span>🔐</span>
+                <p>Secure Gaming</p>
+            </div>
+            <div class="feature">
+                <span>👑</span>
+                <p>VIP Access</p>
+            </div>
+        </div>
 
+        <div class="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button class="btn-login" onclick="login()">Enter Casino</button>
+            
+            <div class="divider">
+                <span>or</span>
+            </div>
+            
+            <button class="btn-guest" onclick="guestLogin()">🎲 Continue as Guest</button>
+            
+            <div class="error-msg" id="errorMsg">Invalid credentials</div>
+        </div>
+
+        <!-- Flag 1 escondida en el código fuente -->
+        <!-- flag{w3lc0m3_t0_crypt0p4l4c3_c4s1n0} -->
+        
+        <p class="hint">🔍 Hint: Check the source code and network traffic</p>
+    </div>
+
+    <!-- Scripts del frontend -->
+    <script src="js/main.js"></script>
+</body>
+</html>
