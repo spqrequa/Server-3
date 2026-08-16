@@ -1,1 +1,24 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://enric-xx.github.io/Server-3/</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://enric-xx.github.io/Server-3/casino.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://enric-xx.github.io/Server-3/api/auth/?token=ghjkuiopertysdfgtyui/index.json</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://enric-xx.github.io/Server-3/api/auth/?token=asdfdfghmqweiopanmqwe/index.json</loc>
+        <priority>0.3</priority>
+    </url>
+    <!--
+        Pista: Los tokens son fragmentos de la secuencia qwerty
+        Cada rol tiene un fragmento diferente.
+        ¿Puedes encontrar el patrón?
+    -->
+</urlset>
