@@ -1,0 +1,10 @@
+{
+    "status": "LOSE",
+    "token": "ghjkuiopertysdfgtyui",
+    "bet": "green",
+    "amount": 10,
+    "result": 24,
+    "payout": 0,
+    "new_balance": "90$",
+    "message": "La bola cayó en 24 (negro). Pierdes."
+}
