@@ -43,7 +43,6 @@ class BalanceManager {
             status: 'UPDATED',
             token: target,
             new_balance: newBalance,
-            flag: 'flag{1d0r_1n_b4l4nc3_m4n4g3r}'
         };
     }
 }
