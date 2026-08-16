@@ -1,0 +1,5 @@
+{
+    "status": "ERROR",
+    "message": "No tienes permisos para retirar fondos con este token. Se requiere token de administrador.",
+    "attempts_remaining": 0
+}
