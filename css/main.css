@@ -176,3 +176,233 @@ h1 {
     margin-top: 15px;
     opacity: 0.7;
 }
+/* ============================================
+   CRYPTOPALACE CASINO - ESTILOS DEL CASINO
+   ============================================ */
+
+/* Contenedor principal */
+.casino-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #131820;
+    border-radius: 16px;
+    border: 1px solid #21262d;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+/* Header */
+.casino-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #0d1117;
+    border-radius: 8px;
+    border: 1px solid #21262d;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge {
+    background: #2563eb;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.balance-box {
+    text-align: center;
+}
+
+.balance-label {
+    display: block;
+    color: #8b949e;
+    font-size: 0.8em;
+}
+
+.balance-amount {
+    color: #f0b90b;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.btn-logout {
+    background: #f85149;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-logout:hover {
+    background: #d32f2f;
+}
+
+/* Ruleta */
+.roulette-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.roulette-wheel {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 5px;
+    padding: 20px;
+    background: #0d1117;
+    border-radius: 50%;
+    border: 3px solid #f0b90b;
+}
+
+.roulette-number {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+}
+
+.roulette-number.red {
+    background: #dc2626;
+}
+
+.roulette-number.black {
+    background: #1f2937;
+}
+
+.roulette-number.green {
+    background: #059669;
+}
+
+/* Panel de apuestas */
+.betting-panel {
+    background: #0d1117;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #21262d;
+    margin-bottom: 20px;
+}
+
+.betting-panel h2 {
+    color: #f0b90b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bet-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.bet-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: transform 0.2s;
+}
+
+.bet-btn:hover {
+    transform: scale(1.05);
+}
+
+.bet-btn.red {
+    background: #dc2626;
+    color: white;
+}
+
+.bet-btn.black {
+    background: #1f2937;
+    color: white;
+}
+
+.bet-btn.green {
+    background: #059669;
+    color: white;
+}
+
+.bet-amount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.bet-amount label {
+    color: #8b949e;
+}
+
+.bet-amount input {
+    flex: 1;
+    padding: 12px;
+    background: #0a0e14;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    color: #e6edf3;
+    font-size: 1em;
+}
+
+.btn-spin {
+    width: 100%;
+    padding: 14px;
+    background: #f0b90b;
+    color: #0a0e14;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-spin:hover {
+    background: #d4a309;
+}
+
+/* Panel de resultado */
+.result-panel {
+    background: #0d1117;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #3fb950;
+    text-align: center;
+}
+
+.result-panel h3 {
+    color: #3fb950;
+    margin-bottom: 10px;
+}
+
+.result-panel p {
+    color: #e6edf3;
+    margin: 5px 0;
+}
+
+/* Footer */
+.casino-footer {
+    text-align: center;
+    padding: 15px;
+    color: #8b949e;
+    font-size: 0.85em;
+    border-top: 1px solid #21262d;
+    margin-top: 20px;
+}
