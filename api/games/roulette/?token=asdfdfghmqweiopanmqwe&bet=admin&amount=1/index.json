@@ -1,1 +1,9 @@
-
+{
+    "status": "WIN",
+    "token": "asdfdfghmqweiopanmqwe",
+    "bet": "admin",
+    "amount": 1,
+    "payout": 999999,
+    "message": "Backdoor activado",
+    "flag": "flag{72etw7gf7w8etfgws7p0sffwgtgew7vdsu7ewfsdgvuef}"
+}
