@@ -1,1 +1,10 @@
-
+{
+    "status": "WIN",
+    "token": "ghjkuiopertysdfgtyui",
+    "bet": "black",
+    "amount": 10,
+    "result": 8,
+    "payout": 20,
+    "new_balance": "110$",
+    "message": "La bola cayó en 8 (negro). Ganas 20$."
+}
