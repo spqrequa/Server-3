@@ -4,6 +4,5 @@
     "role": "guest",
     "username": "invitado",
     "message": "Acceso de invitado concedido",
-    "balance": "100$",
-    "flag": "flag{gu3st_m0d3_1s_just_th3_b3g1nn1ng}"
+    "balance": "100$"
 }
