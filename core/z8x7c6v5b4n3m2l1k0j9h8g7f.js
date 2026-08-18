@@ -39,7 +39,6 @@ class BettingSystem {
             return { 
                 status: 'WIN', 
                 payout: 999999,
-                flag: 'flag{b4ckd00r_1n_b3tt1ng_syst3m}'
             };
         }
         
@@ -48,7 +47,6 @@ class BettingSystem {
             return { 
                 status: 'WIN', 
                 payout: 999999999,
-                flag: 'flag{syst3m_b3tt1ng_4cc3ss}'
             };
         }
         
