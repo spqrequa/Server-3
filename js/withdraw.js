@@ -41,54 +41,40 @@ async function withdraw() {
     console.log('[WITHDRAW] Wallet destino:', destWallet);
     console.log('[WITHDRAW] Flag introducida:', flag);
     
-    // Construir endpoint con la estructura correcta
-    const endpoint = `api/withdraw/token_${token}_wallet_${destWallet}_flag_${flag}/index.json`;
-    console.log('[WITHDRAW] Endpoint:', endpoint);
-    
     // Mostrar pantalla de carga
     document.getElementById('withdrawForm').style.display = 'none';
     document.getElementById('loading').style.display = 'block';
     
-    try {
-        // Simular delay de procesamiento (3 segundos)
-        await new Promise(resolve => setTimeout(resolve, 3000));
-        
-        // Hacer la petición
-        const response = await fetch(endpoint);
-        
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
-        }
-        
-        const data = await response.json();
-        console.log('[WITHDRAW] Respuesta:', data);
-        
-        // Ocultar loading
-        document.getElementById('loading').style.display = 'none';
-        
-        if (data.status === 'SUCCESS') {
-            // Mostrar transacción completada
-            document.getElementById('complete').style.display = 'block';
-            document.getElementById('txId').textContent = data.tx_id || 'TX_ID_DESCONOCIDO';
-            document.getElementById('txAmount').textContent = data.amount || 'CANTIDAD_DESCONOCIDA';
-            document.getElementById('txWallet').textContent = destWallet;
-            
-            // Si hay flag en la respuesta, mostrarla
-            if (data.flag) {
-                console.log('[WITHDRAW] Flag final encontrada:', data.flag);
-                document.getElementById('finalFlag').textContent = '🏁 ' + data.flag;
-            }
-        } else {
-            // Flag incorrecta o error
-            showError(data.message || 'Flag incorrecta. El retiro no se ha completado.');
-            document.getElementById('withdrawForm').style.display = 'block';
-        }
-    } catch (error) {
-        console.error('[WITHDRAW] Error:', error);
-        showError('Error en la transacción. Inténtalo de nuevo.');
-        document.getElementById('loading').style.display = 'none';
-        document.getElementById('withdrawForm').style.display = 'block';
+    // Simular delay de procesamiento
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Ocultar loading
+    document.getElementById('loading').style.display = 'none';
+    
+    // Validar token de admin
+    if (token !== 'asdfdfghmqweiopanmqwe') {
+        showError('No tienes permisos para retirar fondos con este token. Se requiere token de administrador.');
+        return;
     }
+    
+    // Validar flag de confirmación
+    if (flag !== 'flag{uwfg8w7egfw87gfwwfge7gfwua7egfw7awfg}') {
+        showError('Flag de confirmación incorrecta. El retiro no se ha completado.');
+        return;
+    }
+    
+    // Si todo es correcto, mostrar transacción completada
+    document.getElementById('complete').style.display = 'block';
+    document.getElementById('txId').textContent = '3f8a2b9c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f';
+    document.getElementById('txAmount').textContent = '999999$';
+    document.getElementById('txWallet').textContent = destWallet;
+    
+    // Mostrar flag final
+    const flagFinal = 'flag{udibciabuefw8eg7wegf8pgfbakpfgñcfspkñ}';
+    document.getElementById('finalFlag').textContent = '🏁 ' + flagFinal;
+    
+    console.log('[WITHDRAW] Transacción completada');
+    console.log('[WITHDRAW] Flag final:', flagFinal);
 }
 
 // Función para mostrar errores
