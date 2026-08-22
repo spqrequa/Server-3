@@ -5,6 +5,7 @@ Un casino online vulnerable donde el jugador debe hackear el sistema para retira
 
 ---
 
+<img width="1024" height="558" alt="image" src="https://github.com/user-attachments/assets/daed6ab6-c655-44a2-ad6c-6ce4d321da70" />
 
 
 ---
@@ -31,11 +32,11 @@ Un casino online vulnerable donde el jugador debe hackear el sistema para retira
 
 | Token | Rol |
 |-------|-----|
-| token_ghjkuiopertysdfgtyui | Guest |
-| token_asdfdfghmqweiopanmqwe | Admin |
-| token_cvbnopaslñzxlñzxasdfbnmqopasrtyuasdftyuiopasrtyu | Collaborator |
-| token_sdfgyuiosdfgtyuiertymqwe | System |
-| token_uiopsdfgertyrtyu | User |
+| `token_ghjkuiopertysdfgtyui | Guest |
+| `token_asdfdfghmqweiopanmqwe | Admin |
+| `token_cvbnopaslñzxlñzxasdfbnmqopasrtyuasdftyuiopasrtyu | Collaborator |
+| `token_sdfgyuiosdfgtyuiertymqwe | System |
+| `token_uiopsdfgertyrtyu | User |
 
 ---
 
