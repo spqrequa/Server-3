@@ -32,11 +32,11 @@ Un casino online vulnerable donde el jugador debe hackear el sistema para retira
 
 | Token | Rol |
 |-------|-----|
-| `token_ghjkuiopertysdfgtyui | Guest |
-| `token_asdfdfghmqweiopanmqwe | Admin |
-| `token_cvbnopaslñzxlñzxasdfbnmqopasrtyuasdftyuiopasrtyu | Collaborator |
-| `token_sdfgyuiosdfgtyuiertymqwe | System |
-| `token_uiopsdfgertyrtyu | User |
+| `token_ghjkuiopertysdfgtyui`| Guest |
+| `token_asdfdfghmqweiopanmqwe` | Admin |
+| `token_cvbnopaslñzxlñzxasdfbnmqopasrtyuasdftyuiopasrtyu` | Collaborator |
+| `token_sdfgyuiosdfgtyuiertymqwe` | System |
+| `token_uiopsdfgertyrtyu` | User |
 
 ---
 
