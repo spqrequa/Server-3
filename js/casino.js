@@ -16,12 +16,7 @@ const TOKENS = {
 // ============================================
 // [INFO] Endpoints de la API
 // ============================================
-// Auth:    api/auth/token_XXX/index.json
-// Users:   api/users/token_XXX/index.json
-// Balance: api/balance/token_XXX/index.json
-// Ruleta:  api/games/roulette/token_XXX_bet_YYY_amount_ZZZ/index.json
-// Retiro:  api/withdraw/token_XXX_wallet_YYY_flag_ZZZ/index.json
-// ============================================
+// view-source:https://enric-xx.github.io/Server-3/api/
 
 let currentToken = null;
 let currentUser = null;
