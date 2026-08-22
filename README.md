@@ -42,7 +42,7 @@ Un casino online vulnerable donde el jugador debe hackear el sistema para retira
 
 ## 📝 Writeup
 
-Lee el writeup completo en Medium: Server-3: CryptoPalace Casino - Walkthrough
+Lee el writeup completo en Medium: [Server-3: Vulnerable CryptoPalace Casino - VulnerabilityWeb Walkthrough (7 Flags)](https://enric-xx.medium.com/server-3-vulnerable-cryptopalace-casino-vulnerabilityweb-walkthrough-7-flags-2094aedb606c)
 
 ---
 
